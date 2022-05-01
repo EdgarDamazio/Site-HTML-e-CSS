@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AD1</title>
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+    <link rel="stylesheet" href="estilos/estilos.css">
+
+    <style>
+        #linhaEnder {
+            height: 50px;
+        }
+
+        #inpEnder{
+            width: 394px;
+            height: 80px;
+            margin-left: 10px;
+        }
+
+        #leg{
+            text-align: left;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    
+    <address>
+        <p class="ender">
+                Rua do Poço do Elefantinho, 123 <br>
+                Tel:(21) 4321-5678 <br>
+                contato@paquiderme.com.br <br>
+        </p>
+    </address>
+
+         <header>
+        <img src="Imagens/PakiLogoTopo.png" alt="logo" class="imgLogo">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">INICIAL</a></li>
+            <li><a href="memorias.html">MEMÓRIAS</a></li>
+            <li><a href="hds.html">HDs / SSDs</a></li>
+            <li><a href="cadastro.html">CADASTRO</a></li>
+            <li><a href="compras.html">COMPRAS</a></li>
+        </ul>
+    </nav>   
+
+    <section>
+        <form class="FormBox">
+            <h1>Cadastro</h1>
+            <fieldset class="FSLinhaInteira">
+                <legend>Identificação</legend>
+                
+                    <div class="LinhaForm">
+                        <label for="email" class="LabBox">E-mail</label>
+                        <input type="email" name="email" class="InpBoxGnd" required>
+                    </div>
+               
+                   <div class="ColEsq">
+                        <label for="senha" class="LabBox">Senha</label>
+                        <input type="password" name="senha" class="InpBoxMed" required>
+                    </div>
+                        <div class="ColDir">
+                            <label for="confirme" class="LabBox">Confirme</label>
+                            <input type="password" name="confirme" class="InpBoxMed" required>
+                        </div>
+
+            </fieldset>
+            
+            <fieldset class="FSLinhaInteira">
+                <legend>Dados Pessoais</legend>
+                
+                <div class="LinhaForm">
+                    <label for="nome" class="LabBox">Nome</label>
+                    <input type="text" class="InpBoxGnd" required>
+                </div>
+
+                <div id="LinhaEnder">
+                    <label for="endereço" class="LabBox">Endereço</label>
+                    <textarea name="indEnder" rows="2" id="inpEnder" required></textarea>
+                </div>
+
+                <div class="ColEsq">
+                    <label for="telefone" class="LabBox">Telefone</label>
+                    <input type="text" class="InpBoxMed" required>
+                </div>
+
+                <div class="ColDir">
+                    <label for="celular" class="LabBox">Celular</label>
+                    <input type="text" class="InpBoxMed">
+                </div>
+
+                <fieldset  class="FSColEsq">
+                    <legend id="leg">Nascimento</legend>
+                       <div>
+                           <input type="number" name="DiaNasc" min="1" max="31" class="numDD" required>/
+                            <input type="number" name="MesNasc" min="1" max="12" class="numDD" required>/
+                            <input type="number" name="AnoNasc" min="1900" max="2022" value="1980" class="numQD">
+                       </div>
+                </fieldset>
+
+                <fieldset class="FSColDir">
+                    <legend id="leg">Sexo</legend>
+                        <div>
+                            <label><input type="radio" name="TglSexo"
+                                    value="M" />Mas</label>
+                            <label><input type="radio" name="TglSexo"
+                                    value="F" />Fem</label>
+                            <label><input type="radio" name="TglSexo"
+                                    value="O" checked/>Outro</label>
+                    </div>
+                </fieldset>
+
+            <div class="botoes">
+                <input type="submit" value="Cadastrar">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+            
+    </section>
+
+    
+</body>
+</html>

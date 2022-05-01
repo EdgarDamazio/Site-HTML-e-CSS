@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AD1</title>
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+    <link rel="stylesheet" href="estilos/estilos.css">
+
+    <style>
+      #loginCad{
+          width: 260px;
+      }
+
+      #idEmail{
+          width: 160px;
+      }
+
+      #senhaCad{
+          width: 180px;
+      }
+
+      #lisSelProd{
+          width: 370px;
+      }
+
+      #selProduto{
+          width: 75%;
+      }
+
+      #btnIncluir{
+          width: 70px;
+      }
+
+      #boxPedidos{
+          height: 100px;
+      }
+
+      #lisPedArea{
+          height: 90%;
+          width: 100%;
+      }
+
+      #fsBandeira{
+          height: 80px;
+          text-align: left;
+          width: 120px;
+         
+      }
+
+      #numCartao{
+          width: 350px;
+          height: 35px;
+          padding-top: 10px;
+                
+      }
+
+      #valCartao{
+          width: 230px;
+          height: 35px;
+       
+      }
+
+      #boxParcel{
+          width: 230px;
+          height: 30px;
+       
+      }
+
+      
+
+    </style>
+
+
+</head>
+<body>
+    
+    <address>
+        <p class="ender">
+                Rua do Poço do Elefantinho, 123 <br>
+                Tel:(21) 4321-5678 <br>
+                contato@paquiderme.com.br <br>
+        </p>
+    </address>
+
+         <header>
+        <img src="Imagens/PakiLogoTopo.png" alt="logo" class="imgLogo">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">INICIAL</a></li>
+            <li><a href="memorias.html">MEMÓRIAS</a></li>
+            <li><a href="hds.html">HDs / SSDs</a></li>
+            <li><a href="cadastro.html">CADASTRO</a></li>
+            <li><a href="compras.html">COMPRAS</a></li>
+        </ul>
+    </nav>   
+
+    <section>
+        <form class="FormBox">
+            <h1>Compras</h1>
+            <fieldset class="FSLinhaInteira">
+                <legend>Identificação</legend>
+                
+                    <div class="FSColEsq" id="loginCad">
+                        <label for="email" class="LabBox">E-mail</label>
+                        <input type="email" name="email" id="idEmail" required>
+                    </div>
+               
+                   <div class="FSColDir" id="senhaCad">
+                        <label for="senha" class="LabBox">Senha</label>
+                        <input type="password" name="senha" class="InpBoxMed" required>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="FSLinhaInteira"> 
+                        <i>Se você ainda não tem cadastro clique <a href="cadastro.html">aqui</a></i>
+                    </div>
+
+                </fieldset>
+
+                <fieldset class="FSLinhaInteira">
+                    <legend>Lista de Compras</legend>
+                    <div>
+                        Produtos:
+                        <select name="selProduto" id="">
+                            <option value="----">----</option>
+                            <optgroup label="Memória DDR3">
+                                <option>Kingston 4Gb</option>
+                                <option>Samsung 8Gb</option>
+                            </optgroup>
+                            <optgroup label="Memória DDR4">
+                                <option>Kingston Fury 8Gb</option>
+                                <option>Corsair Vengeance 8Gb</option>
+                            </optgroup>
+                            <optgroup label="HD Sata III">
+                                <option>Western Digital 500Gb</option>
+                                <option>Seagate 1 Tb</option>
+                            </optgroup>
+                            <optgroup label="SSD Sata III">
+                                <option>Samdisk 480 Gb</option>
+                                <option>Kingston 960 Gb</option>
+                            </optgroup>
+                            <optgroup label="SSD M2">
+                                <option>Kingston 500 Gb</option>
+                                <option>Western Digital 240 Gb</option>
+                            </optgroup>
+                        </select>
+                        <input type="button" value="Incluir" class="ColDir" id="btnIncluir">
+                        </div>
+
+                    <div>
+                        <textarea name="listaPedidos" cols="65" rows="5" id="boxPedidos"></textarea>
+                    </div>
+
+                    <div class="ColDir">
+                        <label for="">Valor: R$
+                        <input type="text" name="listaPedidos" readonly  class="InpBoxMed" /></label>
+                    </div>
+
+                </fieldset>
+                
+                <fieldset class="FSLinhaInteira">
+                    <legend>Dados do Cartão</legend>
+                   
+                    <div class="ColDir" id="fsBandeira">
+                        <fieldset class="FSColDir"  id="fsBandeira">
+                        <legend>Bandeira</legend>
+                            <div class="ColDir">
+                                <label ><input type="radio"     name="bandeira" checked>Visa</label>
+                                <label><input type="radio" name="bandeira">Master</label>
+                                <label><input type="radio" name="bandeira">Elo</label>
+                            </div>
+                        </fieldset>
+                        
+                    </div>
+
+                    <div class="ColEsq" id="numCartao">
+                            <label>Número:</label>
+                            <input type="number" class="numDD">
+                            <input type="number" class="numDD">
+                            <input type="number" class="numDD">
+                            <input type="number" class="numDD">
+                        </div>
+                        
+                        <div class="ColEsq" id="valCartao">
+                            <label>Validade:</label>
+                            <input type="number" name="mesVal" class="numDD" value="1" min="1" max="12">
+                            <input type="number" name="anoVal" class="numQD" value="2022" min="2022" max="2026">
+                        </div>
+
+                        <div class="ColEsq" id="boxParcel">
+                            <label>Parcelas:</label>
+                            <input type="number" class="numDD" min="1" max="12"> x Sem Juros
+                        
+                        </div>
+                    </div>
+
+                    
+
+                </fieldset>
+            
+            <div class="botoes">
+                <input type="submit" value="Confirmar">
+                <input type="reset" value="Limpar">
+            </div>
+        </form>
+            
+    </section>
+
+    
+</body>
+</html>
